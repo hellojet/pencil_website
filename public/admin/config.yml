@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-username/pencil-website
+  repo: hellojet/pencil_website
   branch: main
 
 media_folder: public/images/products
