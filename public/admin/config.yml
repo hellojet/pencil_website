@@ -2,7 +2,7 @@ backend:
   name: github
   repo: hellojet/pencil_website
   branch: main
-  site_domain: pencil-website-rho.vercel.app
+  site_domain: 9d5172d3-91b5-4894-9f64-67157ef102c4
   base_url: https://api.netlify.com
   auth_endpoint: auth
 
