@@ -10,10 +10,13 @@ export async function GET() {
     <title>Fancy Pencil — Admin</title>
   </head>
   <body>
+    <script>window.CMS_MANUAL_INIT = true</script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
-      CMS.init({
+      const { initCMS: init } = window
+      init({
         config: {
+          load_config_file: false,
           backend: {
             name: 'github',
             repo: 'hellojet/pencil_website',
