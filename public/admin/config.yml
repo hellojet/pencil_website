@@ -6,7 +6,7 @@ backend:
   base_url: https://api.netlify.com
   auth_endpoint: auth
 
-site_url: https://pencil-website-rho.vercel.app
+site_url: https://www.sathiart.com
 
 media_folder: public/images/products
 public_folder: /images/products
