@@ -7,7 +7,7 @@ import ProductFilter from '@/components/products/ProductFilter'
 
 export const metadata: Metadata = {
   title: 'Products',
-  description: 'Browse our full range of acrylic markers, paint sticks, glitter brushes and art pens.',
+  description: 'Browse our full range of acrylic markers, paint sets, glitter brushes and art pens.',
 }
 
 interface ProductsPageProps {

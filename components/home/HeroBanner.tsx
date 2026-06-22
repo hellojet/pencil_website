@@ -12,10 +12,10 @@ export default function HeroBanner() {
               Professional Art Supplies Manufacturer
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Premium Acrylic Markers &amp; Paint Sticks
+              Premium Acrylic Markers &amp; Paint Sets
             </h1>
             <p className="text-blue-100 text-lg leading-relaxed mb-8">
-              Factory-direct supply of Hi-tech acrylic markers, paint sticks, glitter brushes and more.
+              Factory-direct supply of Hi-tech acrylic markers, paint sets, glitter brushes and more.
               Certified quality, flexible MOQ, full customization support.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -50,7 +50,7 @@ export default function HeroBanner() {
           <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
             <Image
               src="/images/hero-banner.jpg"
-              alt="Fancy Pencil - Premium Acrylic Markers"
+              alt="SathiArt - Premium Acrylic Markers"
               fill
               className="object-cover"
               priority

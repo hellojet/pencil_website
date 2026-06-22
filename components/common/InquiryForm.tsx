@@ -18,6 +18,7 @@ export default function InquiryForm({ productName, productSku }: InquiryFormProp
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { name, value } = event.target
@@ -27,10 +28,25 @@ export default function InquiryForm({ productName, productSku }: InquiryFormProp
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault()
     setIsSubmitting(true)
-    // Mock submission — replace with real email service (Resend / EmailJS)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    setError('')
+
+    try {
+      const response = await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'inquiry',
+          ...formData,
+        }).toString(),
+      })
+
+      if (!response.ok) throw new Error('Submission failed')
+      setIsSubmitted(true)
+    } catch {
+      setError('Failed to send inquiry. Please try again or email us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -50,7 +66,13 @@ export default function InquiryForm({ productName, productSku }: InquiryFormProp
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form name="inquiry" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-5">
+      <input type="hidden" name="form-name" value="inquiry" />
+      {error && (
+        <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg px-4 py-3">
+          {error}
+        </div>
+      )}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="name">

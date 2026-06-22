@@ -18,7 +18,7 @@ export default function HomePage() {
       <section className="py-16 bg-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">Why Choose Fancy Pencil?</h2>
+            <h2 className="text-3xl font-bold">Why Choose SathiArt?</h2>
             <p className="mt-3 text-blue-200 max-w-xl mx-auto">
               Over 13 years of experience in professional art supplies manufacturing
             </p>

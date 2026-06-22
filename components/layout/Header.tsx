@@ -20,7 +20,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl font-bold text-blue-700 tracking-tight">
-              Fancy<span className="text-gray-800">Pencil</span>
+              Sathi<span className="text-gray-800">Art</span>
             </span>
           </Link>
 

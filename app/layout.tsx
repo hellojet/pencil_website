@@ -8,12 +8,12 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Fancy Pencil — Premium Acrylic Markers & Art Supplies',
-    template: '%s | Fancy Pencil',
+    default: 'SathiArt — Premium Acrylic Markers & Art Supplies',
+    template: '%s | SathiArt',
   },
   description:
-    'Factory-direct supplier of Hi-tech acrylic markers, paint sticks, glitter brushes and art pens. Certified quality, flexible MOQ, full customization support for B2B buyers worldwide.',
-  keywords: ['acrylic marker', 'paint sticks', 'art supplies', 'wholesale', 'B2B', 'manufacturer'],
+    'Factory-direct supplier of Hi-tech acrylic markers, paint sets, glitter brushes and art pens. Certified quality, flexible MOQ, full customization support for B2B buyers worldwide.',
+  keywords: ['acrylic marker', 'paint sets', 'art supplies', 'wholesale', 'B2B', 'manufacturer'],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

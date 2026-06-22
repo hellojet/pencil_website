@@ -3,7 +3,7 @@ import InquiryForm from '@/components/common/InquiryForm'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Send us an inquiry for acrylic markers, paint sticks and art supplies. We respond within 24 hours.',
+  description: 'Send us an inquiry for acrylic markers, paint sets and art supplies. We respond within 24 hours.',
 }
 
 export default function ContactPage() {
@@ -34,7 +34,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-gray-700">Email</p>
-                    <p className="text-gray-500 text-sm mt-0.5">inquiry@fancypencil.com</p>
+                    <p className="text-gray-500 text-sm mt-0.5">sathiartbusiness@gmail.com</p>
                   </div>
                 </div>
 
@@ -48,8 +48,8 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm font-medium text-gray-700">Address</p>
                     <p className="text-gray-500 text-sm mt-0.5">
-                      No.91, Chuangye Road, Economic Development Zone,<br />
-                      Lai&apos;an, Chuzhou, Anhui, China
+                      No. 40, Tianxin Road, Fenshui Town,<br />
+                      Tonglu County, Hangzhou, Zhejiang, China
                     </p>
                   </div>
                 </div>

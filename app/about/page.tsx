@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Fancy Pencil — a professional manufacturer of acrylic markers and art supplies with over 13 years of experience.',
+  description: 'Learn about SathiArt — a professional manufacturer of acrylic markers and art supplies with over 13 years of experience.',
 }
 
 const CERTIFICATIONS = ['WCA', 'BSCI', 'ISO9001', 'ISO14001', 'ISO45001']
@@ -23,9 +23,9 @@ export default function AboutPage() {
       {/* Hero */}
       <div className="bg-blue-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold mb-4">About Fancy Pencil</h1>
+          <h1 className="text-4xl font-bold mb-4">About SathiArt</h1>
           <p className="text-blue-200 text-lg max-w-2xl">
-            Professional manufacturer of acrylic markers, paint sticks and art pens,
+            Professional manufacturer of acrylic markers, paint sets and art pens,
             supplying quality stationery to buyers worldwide since 1999.
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Story</h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                <strong>BB-fox Stationery</strong> has a lot of patents and leading technologies in innovation new products.
+                <strong>SathiArt</strong> has a lot of patents and leading technologies in innovation new products.
                 With over 13 years of experience, we have built a reputation for delivering higher cost performance products
                 to customers around the world.
               </p>
@@ -71,7 +71,7 @@ export default function AboutPage() {
           <div className="relative h-72 rounded-2xl overflow-hidden bg-gray-100">
             <Image
               src="/images/factory.jpg"
-              alt="BB-fox Stationery Factory"
+              alt="SathiArt Factory"
               fill
               className="object-cover"
             />
