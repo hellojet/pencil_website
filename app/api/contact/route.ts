@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY)
 
     await resend.emails.send({
-      from: 'SathiPro <onboarding@resend.dev>',
+      from: 'SathiPro <noreply@sathiart.com>',
       to: TO_EMAIL,
       subject,
       html: htmlContent,
