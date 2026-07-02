@@ -309,7 +309,7 @@ npm run dev
 
 # 4. 推送到 GitHub
 git init && git add . && git commit -m "init"
-git remote add origin https://github.com/your-username/pencil-website.git
+git remote add origin https://github.com/hellojet/pencil_website.git
 git push -u origin main
 
 # 5. Vercel 导入 GitHub 仓库，自动部署

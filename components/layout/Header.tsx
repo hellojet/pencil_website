@@ -5,8 +5,9 @@ import { useState } from 'react'
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/products', label: 'Products' },
-  { href: '/about', label: 'About Us' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/industries', label: 'Industries' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -17,14 +18,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl font-bold text-blue-700 tracking-tight">
-              Sathi<span className="text-gray-800">Art</span>
+              Sathi<span className="text-gray-800">Pro</span>
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <Link
@@ -37,17 +36,15 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
             <Link
               href="/contact"
               className="bg-blue-700 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-800 transition-colors duration-200"
             >
-              Get a Quote
+              Start Sourcing
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-700"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -65,7 +62,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-gray-100 py-4">
             <nav className="flex flex-col gap-4">
@@ -84,7 +80,7 @@ export default function Header() {
                 className="bg-blue-700 text-white px-5 py-2 rounded-lg font-medium text-center hover:bg-blue-800 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Get a Quote
+                Start Sourcing
               </Link>
             </nav>
           </div>
