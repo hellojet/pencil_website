@@ -76,14 +76,12 @@ export default function AboutContent() {
               </p>
             </div>
           </div>
-          <div className="relative h-72 lg:h-96 rounded-2xl overflow-hidden bg-gray-200 flex items-center justify-center">
-            <div className="text-center text-gray-400 px-8">
-              <svg className="w-16 h-16 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
-              </svg>
-              <p className="text-sm font-medium">Factory Visit Photo Placeholder</p>
-              <p className="text-xs mt-1">Staged factory visit photo goes here</p>
-            </div>
+          <div className="relative h-72 lg:h-96 rounded-2xl overflow-hidden">
+            <img
+              src="/images/factory-visit.png"
+              alt="SathiPro team visiting a manufacturing factory in China"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -123,11 +121,19 @@ export default function AboutContent() {
                 </button>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="h-40 rounded-lg bg-gray-200 flex items-center justify-center">
-                  <p className="text-xs text-gray-400 text-center px-2">3D Rendering Placeholder</p>
+                <div className="h-40 rounded-lg overflow-hidden">
+                  <img
+                    src="/images/3d-product-rendering.png"
+                    alt="3D product rendering example"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="h-40 rounded-lg bg-gray-200 flex items-center justify-center">
-                  <p className="text-xs text-gray-400 text-center px-2">Packaging Design Placeholder</p>
+                <div className="h-40 rounded-lg overflow-hidden">
+                  <img
+                    src="/images/packaging-design.png"
+                    alt="Product packaging design example"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>

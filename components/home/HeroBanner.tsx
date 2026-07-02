@@ -36,14 +36,12 @@ export default function HeroBanner() {
             </div>
           </div>
 
-          <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-2xl bg-gray-200 flex items-center justify-center">
-            <div className="text-center text-gray-400 px-8">
-              <svg className="w-16 h-16 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0" />
-              </svg>
-              <p className="text-sm font-medium">Personal Photo Placeholder</p>
-              <p className="text-xs mt-1">Factory visit photo goes here</p>
-            </div>
+          <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src="/images/hero-personal.png"
+              alt="SathiPro founder visiting a manufacturing factory in China"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
