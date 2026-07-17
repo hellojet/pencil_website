@@ -127,11 +127,11 @@ export default function AboutContent() {
               </div>
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {DESIGN_IMAGES.map((image, index) => (
-                  <div key={image} className="aspect-[4/3] rounded-lg overflow-hidden">
+                  <div className="aspect-square rounded-lg border border-gray-100 bg-gray-50 p-2" key={image}>
                     <img
                       src={image}
                       alt={`Product design and 3D capability example ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                       loading="lazy"
                     />
                   </div>

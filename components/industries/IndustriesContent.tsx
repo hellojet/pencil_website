@@ -9,7 +9,7 @@ const INDUSTRIES = [
     description: 'We support sourcing of high-volume and customized stationery products.',
     items: ['Pens & writing instruments', 'Notebooks & paper products', 'Art supplies & creative tools', 'OEM packaging & branding'],
     images: Array.from(
-      { length: 14 },
+      { length: 12 },
       (_, index) => `/images/site/industries/stationery-${index + 1}.webp`,
     ),
   },
@@ -27,7 +27,7 @@ const INDUSTRIES = [
     description: 'We assist in sourcing light industrial manufacturing equipment.',
     items: ['Packaging machines', 'Printing machines', 'Stationery production equipment', 'Small industrial tools'],
     images: Array.from(
-      { length: 8 },
+      { length: 9 },
       (_, index) => `/images/site/industries/machinery-${index + 1}.webp`,
     ),
   },
@@ -36,7 +36,7 @@ const INDUSTRIES = [
     description: 'We specialize in sourcing digestive endoscopy equipment and related medical devices, working with capable suppliers and supporting production requirement alignment.',
     items: ['Gastrointestinal endoscopy systems', 'Endoscopic imaging equipment', 'Disposable consumables & components'],
     images: Array.from(
-      { length: 10 },
+      { length: 11 },
       (_, index) => `/images/site/industries/medical-${index + 1}.webp`,
     ),
   },
@@ -104,11 +104,11 @@ export default function IndustriesContent() {
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
               {industry.images.map((img, imgIndex) => (
-                <div key={img} className="aspect-[4/3] rounded-lg overflow-hidden">
+                <div className="aspect-square rounded-lg border border-gray-100 bg-gray-50 p-2" key={img}>
                   <img
                     src={img}
                     alt={`${industry.title} product ${imgIndex + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                     loading="lazy"
                   />
                 </div>
