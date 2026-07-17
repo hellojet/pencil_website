@@ -38,8 +38,8 @@ export default function HeroBanner() {
 
           <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="/images/hero-personal.png"
-              alt="SathiPro founder visiting a manufacturing factory in China"
+              src="/images/site/home/hero.webp"
+              alt="SathiPro sourcing partner in China"
               className="w-full h-full object-cover"
             />
           </div>

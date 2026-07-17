@@ -4,6 +4,11 @@ import { useState } from 'react'
 import Link from 'next/link'
 import DesignInquiryForm from '@/components/common/DesignInquiryForm'
 
+const DESIGN_IMAGES = Array.from(
+  { length: 8 },
+  (_, index) => `/images/site/about/design-${index + 1}.webp`,
+)
+
 const STRENGTHS = [
   {
     title: 'Stable Factory Network',
@@ -78,8 +83,8 @@ export default function AboutContent() {
           </div>
           <div className="relative h-72 lg:h-96 rounded-2xl overflow-hidden">
             <img
-              src="/images/factory-visit.png"
-              alt="SathiPro team visiting a manufacturing factory in China"
+              src="/images/site/about/who-we-are.webp"
+              alt="SathiPro team and supplier partners in China"
               className="w-full h-full object-cover"
             />
           </div>
@@ -120,21 +125,17 @@ export default function AboutContent() {
                   Start Design
                 </button>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="h-40 rounded-lg overflow-hidden">
-                  <img
-                    src="/images/3d-product-rendering.png"
-                    alt="3D product rendering example"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="h-40 rounded-lg overflow-hidden">
-                  <img
-                    src="/images/packaging-design.png"
-                    alt="Product packaging design example"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                {DESIGN_IMAGES.map((image, index) => (
+                  <div key={image} className="aspect-[4/3] rounded-lg overflow-hidden">
+                    <img
+                      src={image}
+                      alt={`Product design and 3D capability example ${index + 1}`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>

@@ -8,25 +8,37 @@ const INDUSTRIES = [
     title: 'Stationery & Creative Products',
     description: 'We support sourcing of high-volume and customized stationery products.',
     items: ['Pens & writing instruments', 'Notebooks & paper products', 'Art supplies & creative tools', 'OEM packaging & branding'],
-    images: ['/images/industries/stationery-1.png', '/images/industries/stationery-2.png', '/images/industries/stationery-3.png', '/images/industries/stationery-4.png'],
+    images: Array.from(
+      { length: 14 },
+      (_, index) => `/images/site/industries/stationery-${index + 1}.webp`,
+    ),
   },
   {
     title: 'Apparel & Textile Products',
     description: 'We help buyers source from clothing factories in China.',
     items: ['Down jackets', 'Winter apparel', 'Casual wear OEM production', 'Fabric sourcing & sampling'],
-    images: ['/images/industries/apparel-1.png', '/images/industries/apparel-2.png', '/images/industries/apparel-3.png', '/images/industries/apparel-4.png'],
+    images: Array.from(
+      { length: 6 },
+      (_, index) => `/images/site/industries/apparel-${index + 1}.webp`,
+    ),
   },
   {
     title: 'Machinery & Industrial Equipment',
     description: 'We assist in sourcing light industrial manufacturing equipment.',
     items: ['Packaging machines', 'Printing machines', 'Stationery production equipment', 'Small industrial tools'],
-    images: ['/images/industries/machinery-1.png', '/images/industries/machinery-2.png', '/images/industries/machinery-3.png', '/images/industries/machinery-4.png'],
+    images: Array.from(
+      { length: 8 },
+      (_, index) => `/images/site/industries/machinery-${index + 1}.webp`,
+    ),
   },
   {
     title: 'Medical & Healthcare Products',
     description: 'We specialize in sourcing digestive endoscopy equipment and related medical devices, working with capable suppliers and supporting production requirement alignment.',
     items: ['Gastrointestinal endoscopy systems', 'Endoscopic imaging equipment', 'Disposable consumables & components'],
-    images: ['/images/industries/medical-1.png', '/images/industries/medical-2.png', '/images/industries/medical-3.png', '/images/industries/medical-4.png'],
+    images: Array.from(
+      { length: 10 },
+      (_, index) => `/images/site/industries/medical-${index + 1}.webp`,
+    ),
   },
 ]
 
@@ -90,13 +102,14 @@ export default function IndustriesContent() {
               </button>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
               {industry.images.map((img, imgIndex) => (
-                <div key={imgIndex} className="h-36 rounded-lg overflow-hidden">
+                <div key={img} className="aspect-[4/3] rounded-lg overflow-hidden">
                   <img
                     src={img}
                     alt={`${industry.title} product ${imgIndex + 1}`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               ))}
